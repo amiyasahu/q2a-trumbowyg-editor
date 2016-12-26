@@ -8,8 +8,8 @@
     Plugin Author: Amiya Sahu
     Plugin Author URI: http://www.amiyasahu.com
     Plugin License: MIT
-    Plugin Minimum Question2Answer Version: 1.3
-    Plugin Update Check URI:
+    Plugin Minimum Question2Answer Version: 1.7.4
+    Plugin Update Check URI: https://raw.githubusercontent.com/amiyasahu/trumbowyg-editor/master/qa-plugin.php
 */
 
 

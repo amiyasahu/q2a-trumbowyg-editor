@@ -2,6 +2,8 @@
 
 /**
  * Class for handeling image upload for the editor module 
+ *
+ * @since 1.0
  */
 class qa_trumbowyg_upload
 {
@@ -10,6 +12,8 @@ class qa_trumbowyg_upload
      * Returns the URL for serving the request 
      * @param  string $request 
      * @return true | false 
+     *
+     * @since 1.0
      */
     public function match_request($request)
     {
@@ -20,6 +24,8 @@ class qa_trumbowyg_upload
      * process the request for a image upload 
      * @param  string $request request for processing 
      * @return null
+     * 
+     * @since 1.0
      */
     public function process_request($request)
     {
