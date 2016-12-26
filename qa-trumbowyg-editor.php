@@ -241,7 +241,7 @@ class qa_trumbowyg_editor
     /**
      * Reads the post from the $POST variable and retrn the content 
      * 
-     * @param  $ieldname
+     * @param  $fieldname
      * @return string
      */
     public function read_post($fieldname) {
@@ -293,7 +293,7 @@ class qa_trumbowyg_editor
      * Converts bytes to MB 
      * 
      * @param  $bytes
-     * @return string
+     * @return Megabyte representation of the $bytes 
      */
     private function bytes_to_mega_html($bytes) {
         return qa_html(number_format($bytes/1048576, 1));
