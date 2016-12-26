@@ -31,6 +31,8 @@ class qa_trumbowyg_upload
             
             if (qa_opt('trumbowyg_editor_upload_images')){
 
+                require_once QA_INCLUDE_DIR.'app/upload.php';
+
                 $upload = qa_upload_file_one(
                     qa_opt('trumbowyg_editor_upload_max_size'),
                     qa_get('qa_only_image'),
@@ -39,12 +41,13 @@ class qa_trumbowyg_upload
                 );
 
                 $message = @$upload['error'];
+                // store the URL of the file uploaded 
                 $url = @$upload['bloburl'];
-                $success = empty($upload['error']) ? true : false;  
-                $message = qa_lang('users/no_permission');
-                
+                // if no errors returned then it is considered as a successful upload 
+                $success = empty($upload['error']) ? true : false; 
+
             } else {
-                require_once QA_INCLUDE_DIR.'app/upload.php';
+                $message = qa_lang('users/no_permission');                
             }
 
         }
