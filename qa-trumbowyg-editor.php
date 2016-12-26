@@ -172,8 +172,8 @@ class qa_trumbowyg_editor
         $baseUrl = $this->urltoroot . $this->base_path;
 
         $scriptsrc = $baseUrl . '/trumbowyg.min.js?' . $this->editorVersion;
-        $upload_plugin = $baseUrl . '/trumbowyg.min.js?' . $this->editorVersion;
         $css_src = $baseUrl . '/ui/trumbowyg.min.css?' . $this->editorVersion;
+        $colors_css_src = $baseUrl . '/plugins/colors/ui/trumbowyg.colors.min.css?' . $this->editorVersion;
         
         // TODO : Cleanup and make it configurable 
         $plugins = array('base64', 'cleanpaste', 'colors', 'insertaudio', 'noembed', 'pasteimage', 'preformatted', 'upload');
@@ -197,6 +197,7 @@ class qa_trumbowyg_editor
 
             $qa_content['script_src'][] = $scriptsrc;
             $qa_content['css_src'][] = $css_src ;
+            $qa_content['css_src'][] = $colors_css_src ;
             
             if(!empty($lang)){
                 $qa_content['script_src'][] = $this->urltoroot . $this->base_path . '/langs/' . $lang.'.min.js?'.$this->editorVersion;
