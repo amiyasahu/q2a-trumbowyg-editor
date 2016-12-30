@@ -198,6 +198,7 @@ class qa_trumbowyg_editor
             $qa_content['script_src'][] = $scriptsrc;
             $qa_content['css_src'][] = $css_src ;
             $qa_content['css_src'][] = $colors_css_src ;
+            $qa_content['custom_trumbowyg_css'] = "<style>.trumbowyg-modal-box label input{margin-top : 0; margin-bottom : 0;}</style>" ;
             
             if(!empty($lang)){
                 $qa_content['script_src'][] = $this->urltoroot . $this->base_path . '/langs/' . $lang.'.min.js?'.$this->editorVersion;
