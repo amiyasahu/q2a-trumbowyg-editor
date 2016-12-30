@@ -60,8 +60,8 @@ class qa_trumbowyg_upload
 
         $data = array(
             'success' => $success,
-            'file'    => qa_js($url),
-            'message' => qa_js($message)
+            'file'    => $url,
+            'message' => $message
         );
         
         echo json_encode($data);
@@ -69,3 +69,4 @@ class qa_trumbowyg_upload
         return null;
     }
 }
+
